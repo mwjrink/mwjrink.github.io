@@ -51,6 +51,7 @@ function App() {
   const onIdentify = async () => {
     setShowAPI(true);
 
+    console.log("1234");
     // POST request using fetch with async / await
     const body = `{ "organs": "flower", "images": "${selectedFlower}", "organs": "leaf", "images": "${selectedLeaves}" }`
     const requestOptions = {
@@ -61,7 +62,7 @@ function App() {
       body
     };
     //https://my-api.plantnet.org/v2/identify/all?api-key=
-    const response = await fetch('https://localhost:3001?api-key=2b10189SmpQJ3XHmESgf2Hz9k', requestOptions);
+    const response = await fetch('https://crossorigin.me/https://my-api.plantnet.org/v2/identify/all?api-key=2b10189SmpQJ3XHmESgf2Hz9k', requestOptions);
     const data = await response.json();
     setResponse(data);
 
