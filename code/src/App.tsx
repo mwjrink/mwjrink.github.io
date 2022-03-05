@@ -2,6 +2,11 @@ import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// import React from 'react';
+// @ts-ignore
+import Camera from 'react-html5-camera-photo';
+import 'react-html5-camera-photo/build/css/index.css';
+
 const api_key = '2b10189SmpQJ3XHmESgf2Hz9k'
 
 const text = "'score': 0.7177, 'scientificName': 'Turbinicarpus valdezianus '"
@@ -10,6 +15,8 @@ function App() {
   const inputFlower = useRef<HTMLInputElement | null>(null);
   const inputLeaves = useRef<HTMLInputElement | null>(null);
   const [selectedFlower, setSelectedFlower] = useState<string | null>(null);
+  const [showCamera, setShowCamera] = useState<boolean>(false);
+  const [showImage, setShowImage] = useState<boolean>(false);
   const [showAPI, setShowAPI] = useState<boolean>(false);
   const [selectedLeaves, setSelectedLeaves] = useState<string | null>(null);
   const [response, setResponse] = useState<string>();
@@ -17,8 +24,23 @@ function App() {
   const onUploadFlower = () => {
     if (inputFlower.current) {
       inputFlower.current.click();
+      setShowImage(true);
     }
   };
+
+  const onTakePicture = () => {
+    setShowCamera(true);
+    setShowImage(false);
+  };
+
+  const handleTakePhoto = (dataUri: any) => {
+    // Do stuff with the photo...
+    // console.log('takePhoto with uri: ', dataUri);
+
+    setShowCamera(false);
+    setShowImage(true);
+    setSelectedFlower(dataUri);
+  }
 
   const onUploadLeaves = () => {
     if (inputLeaves.current) {
@@ -81,11 +103,18 @@ function App() {
       <header className="App-header">
         <div>
           <div>
-            <img src={selectedFlower ?? ""} className="App-logo" alt="" />
+            {showCamera &&
+              <Camera onTakePhoto={handleTakePhoto} />
+            }
+
+            {showImage &&
+              <img src={selectedFlower ?? ""} className="App-logo" alt="" />
+            }
             <br />
             <div>
               <input type='file' id='file' ref={inputFlower} onChange={handleFlowerChange} style={{ display: 'none' }} accept="image/*" />
-              <button onClick={onUploadFlower}>Upload Flower Image</button>
+              <button onClick={onUploadFlower}>Upload Picture</button>
+              <button onClick={onTakePicture}>Take Picture</button>
             </div>
           </div>
           {/* <div>
@@ -99,7 +128,8 @@ function App() {
         </div>
         <button onClick={onIdentify}>Identify</button>
         {showAPI && <div>
-        {text}
+          {response //text
+          }
         </div>}
       </header>
     </div>
