@@ -64,7 +64,7 @@ function App() {
     //https://my-api.plantnet.org/v2/identify/all?api-key=
     const response = await fetch('https://crossorigin.me/https://my-api.plantnet.org/v2/identify/all?api-key=2b10189SmpQJ3XHmESgf2Hz9k', requestOptions);
     const data = await response.json();
-    setResponse(data);
+    // setResponse(data);
 
     console.log(response)
   };
@@ -74,6 +74,7 @@ function App() {
       let input = event.target;
       var fReader = new FileReader();
       if (input.files) {
+        setResponse(input.files[0].toString());
         fReader.readAsDataURL(input.files[0]);
         fReader.onloadend = (event) => {
           if (event && event.target) {
