@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.72d8c293.css",
-    "main.js": "/static/js/main.1651fd27.js",
+    "main.css": "/static/css/main.a7e637e2.css",
+    "main.js": "/static/js/main.9f221e7c.js",
+    "static/media/phlox_result3.jpg": "/static/media/phlox_result3.f7ef3f3544c33f19dc3a.jpg",
     "static/media/3d_garden.PNG": "/static/media/3d_garden.9591eea9fc3fdbbc9a9b.PNG",
     "static/media/fireweed.jpeg": "/static/media/fireweed.91fd11dc1c77b36b1b6a.jpeg",
+    "static/media/phlox_result2.gif": "/static/media/phlox_result2.31650452caa1f88552ee.gif",
     "static/media/black_eyed_susan.gif": "/static/media/black_eyed_susan.a85d6db7e7a3a6a8b6dc.gif",
-    "static/media/plant.jpeg": "/static/media/plant.f219affa8581a8f68b9b.jpeg",
+    "static/media/coneflower_result3.jpg": "/static/media/coneflower_result3.2e1cef0d860ec0d356a2.jpg",
     "static/media/blue_eyed_grass.jpg": "/static/media/blue_eyed_grass.599d2d9201ae347b74bf.jpg",
+    "static/media/coneflower_result2.jpg": "/static/media/coneflower_result2.9196edd1a1b0be6ee47e.jpg",
     "static/media/grandma_garden.jpg": "/static/media/grandma_garden.f1a152798a0c724bfe46.jpg",
     "static/media/primrose.jpg": "/static/media/primrose.eec23f063136ad77e56c.jpg",
     "static/media/3d_grid.png": "/static/media/3d_grid.1c2818bb2f6e7a638ca3.png",
     "static/media/backyard.jpg": "/static/media/backyard.d3c1f776f0ee963e008a.jpg",
     "static/media/rock_polypody.jpg": "/static/media/rock_polypody.a6cad6d10ba96dcee950.jpg",
+    "static/media/primrose_result2.jpg": "/static/media/primrose_result2.be634afc2d4094073e60.jpg",
     "static/media/fall_phlox.jpg": "/static/media/fall_phlox.89ee7e780d772584fe4c.jpg",
-    "static/media/Flower 2.jpeg": "/static/media/Flower 2.8701bbe43cd70a5cb582.jpeg",
     "static/media/eastern_purple_coneflower.jpg": "/static/media/eastern_purple_coneflower.1784c70b5549e1fc2d3d.jpg",
     "static/media/background-placeholder.png": "/static/media/background-placeholder.09ed9eec1da131965c9f.png",
     "static/media/logo.svg": "/static/media/logo.35db1ee964ad7c85012e3761135762b5.svg",
@@ -36,11 +39,11 @@
     "index.html": "/index.html",
     "static/media/down.svg": "/static/media/down.2d924a8e3b49402adccfab20564e3ef7.svg",
     "static/media/up.svg": "/static/media/up.ba32368210b697f6c8c15c0da251edc3.svg",
-    "main.72d8c293.css.map": "/static/css/main.72d8c293.css.map",
-    "main.1651fd27.js.map": "/static/js/main.1651fd27.js.map"
+    "main.a7e637e2.css.map": "/static/css/main.a7e637e2.css.map",
+    "main.9f221e7c.js.map": "/static/js/main.9f221e7c.js.map"
   },
   "entrypoints": [
-    "static/css/main.72d8c293.css",
-    "static/js/main.1651fd27.js"
+    "static/css/main.a7e637e2.css",
+    "static/js/main.9f221e7c.js"
   ]
 }
